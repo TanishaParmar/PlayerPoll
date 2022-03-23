@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="ManageBackgroundsListingCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmH-Te-L7e">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="66"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ytZ-hw-rwo">
+                                <rect key="frame" x="0.0" y="8.5" width="49.5" height="49.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ytZ-hw-rwo" secondAttribute="height" multiplier="1:1" id="q1Q-R0-GR3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH0-bI-XLp" customClass="PPManageBackgroundsWhiteNameLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                <rect key="frame" x="64.5" y="22.5" width="262.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062602095309999994" green="0.143920511" blue="0.62980532649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ytZ-hw-rwo" firstAttribute="height" secondItem="nmH-Te-L7e" secondAttribute="height" multiplier="0.75" id="6QA-xv-Nc6"/>
+                            <constraint firstAttribute="trailing" secondItem="HH0-bI-XLp" secondAttribute="trailing" id="NNK-Cy-xOV"/>
+                            <constraint firstItem="HH0-bI-XLp" firstAttribute="centerY" secondItem="ytZ-hw-rwo" secondAttribute="centerY" id="OgN-aC-bRA"/>
+                            <constraint firstItem="HH0-bI-XLp" firstAttribute="leading" secondItem="ytZ-hw-rwo" secondAttribute="trailing" constant="15" id="PuL-FJ-ekv"/>
+                            <constraint firstItem="ytZ-hw-rwo" firstAttribute="centerY" secondItem="nmH-Te-L7e" secondAttribute="centerY" id="eBx-92-5Dq"/>
+                            <constraint firstItem="ytZ-hw-rwo" firstAttribute="leading" secondItem="nmH-Te-L7e" secondAttribute="leading" id="teN-yg-iQ6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nmH-Te-L7e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0zR-am-zGQ"/>
+                    <constraint firstAttribute="trailing" secondItem="nmH-Te-L7e" secondAttribute="trailing" id="Bqf-WO-8LR"/>
+                    <constraint firstAttribute="bottom" secondItem="nmH-Te-L7e" secondAttribute="bottom" id="bmn-fL-1YS"/>
+                    <constraint firstItem="nmH-Te-L7e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nMw-qw-x6T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundLbl" destination="HH0-bI-XLp" id="PfI-Zw-ZxE"/>
+                <outlet property="imgBackgrounds" destination="ytZ-hw-rwo" id="0RO-OJ-Yfk"/>
+            </connections>
+            <point key="canvasLocation" x="42.753623188405797" y="58.928571428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="1200" height="800"/>
+    </resources>
+</document>

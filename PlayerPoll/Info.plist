@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb343725834232746</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>343725834232746</string>
+	<key>FacebookClientToken</key>
+	<string>692b49d12e8a50319dcb6a891c70c68f</string>
+	<key>FacebookDisplayName</key>
+	<string>PlayerPoll</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>$(APP_NAME) uses camera access for uploading profile picture.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(APP_NAME) uses photo library access for uploading profile picture.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>conthrax-sb.ttf</string>
+		<string>CODE Bold.otf</string>
+		<string>CODE Light.otf</string>
+		<string>Code Pro Light LC.otf</string>
+		<string>Code Pro LC.otf</string>
+		<string>Code Pro Bold LC.otf</string>
+	</array>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Landing</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>branch_key</key>
+	<dict>
+		<key>live</key>
+		<string>key_live_no0Qqof99qGBdaepDdstablcwBlxa2iy</string>
+		<key>test</key>
+		<string>key_test_hj6Mqek13tJvpobgyg8kkcnastlxb5kP</string>
+	</dict>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>applinks:mpjeu.app.link</string>
+		<string>applinks:mpjeu-alternate.app.link</string>
+		<string>applinks:mpjeu.test-app.link</string>
+		<string>applinks:mpjeu-alternate.test-app.link</string>
+	</array>
+</dict>
+</plist>

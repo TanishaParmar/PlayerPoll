@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Code Pro Bold LC.otf">
+            <string>Code-Pro-Bold-LC</string>
+        </array>
+        <array key="Code Pro LC.otf">
+            <string>Code-Pro-LC</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="376" id="KGk-i7-Jjw" customClass="HomePollCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="376"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="376"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-f3-akQ">
+                        <rect key="frame" x="0.0" y="66" width="378" height="266"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Until what age do you think Virat Kohli will play Cricket?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATi-vW-MH7">
+                                <rect key="frame" x="21.5" y="0.0" width="335" height="32"/>
+                                <fontDescription key="fontDescription" name="Code-Pro-LC" family="Code Pro LC" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sfs-9g-rce">
+                                <rect key="frame" x="139" y="52" width="100" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="4S5-LF-6ti"/>
+                                    <constraint firstAttribute="width" constant="100" id="l9r-Ag-Dft"/>
+                                </constraints>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kz7-ez-gzQ">
+                                <rect key="frame" x="100.5" y="200" width="177.5" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚧  Poll in Progress 🚧 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-uG-zi8">
+                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="Code-Pro-Bold-LC" family="Code Pro Bold LC" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCK-cp-B6y">
+                                        <rect key="frame" x="63.5" y="16" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hCK-cp-B6y" secondAttribute="height" multiplier="1:1" id="JbZ-1h-Dk0"/>
+                                            <constraint firstAttribute="width" constant="50" id="Z43-7d-oLC"/>
+                                        </constraints>
+                                        <state key="normal" image="pollsters"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-4i-NRC">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="YIZ-f3-akQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="26X-69-Zo2"/>
+                    <constraint firstItem="YIZ-f3-akQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fLb-4i-NRC" secondAttribute="bottom" constant="66" id="58v-hV-uhM"/>
+                    <constraint firstItem="fLb-4i-NRC" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="Axa-70-A2z"/>
+                    <constraint firstItem="YIZ-f3-akQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QzO-Yw-b0f"/>
+                    <constraint firstItem="fLb-4i-NRC" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lvs-F7-aCl"/>
+                    <constraint firstItem="YIZ-f3-akQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mn9-R1-8lY"/>
+                    <constraint firstItem="fLb-4i-NRC" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.11" id="twP-pR-Oe8"/>
+                    <constraint firstItem="fLb-4i-NRC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="v0H-tt-9tf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="answersTableView" destination="sfs-9g-rce" id="C70-jD-QuY"/>
+                <outlet property="inProgressLbl" destination="ddj-uG-zi8" id="0hW-GY-Ocl"/>
+                <outlet property="pollstersBtn" destination="hCK-cp-B6y" id="GTO-Op-ahJ"/>
+                <outlet property="questionLbl" destination="ATi-vW-MH7" id="aW8-zT-oND"/>
+                <outlet property="tvHeightConstraint" destination="4S5-LF-6ti" id="dG4-Eq-cAP"/>
+                <outlet property="tvWidthConstraint" destination="l9r-Ag-Dft" id="TNk-Q3-xDC"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="198.88392857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pollsters" width="200" height="200"/>
+    </resources>
+</document>

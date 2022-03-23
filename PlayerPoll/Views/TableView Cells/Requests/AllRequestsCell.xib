@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="AllRequestsCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tby-XM-32E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Gc-Uh-b8B">
+                                <rect key="frame" x="25" y="9" width="96" height="73.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-Cf-cOJ" customClass="PPAllRequestWhiteLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Sep 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-fT-ERy" customClass="PPAllRequestWhiteLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="26.5" width="96" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-ZK-0gT" customClass="PPAllRequestWhiteLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="53" width="96" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="read" translatesAutoresizingMaskIntoConstraints="NO" id="4si-S0-6fG">
+                                <rect key="frame" x="284" y="40" width="11" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4si-S0-6fG" secondAttribute="height" multiplier="1:1" id="evL-wg-w75"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062602095309999994" green="0.143920511" blue="0.62980532649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4si-S0-6fG" secondAttribute="trailing" constant="25" id="4HP-x2-Hxf"/>
+                            <constraint firstItem="0Gc-Uh-b8B" firstAttribute="centerY" secondItem="tby-XM-32E" secondAttribute="centerY" id="DVg-3K-mjg"/>
+                            <constraint firstItem="4si-S0-6fG" firstAttribute="width" secondItem="tby-XM-32E" secondAttribute="width" multiplier="0.035" id="TJ0-nl-rwO"/>
+                            <constraint firstItem="4si-S0-6fG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Gc-Uh-b8B" secondAttribute="trailing" constant="100" id="XJa-EC-AXf"/>
+                            <constraint firstItem="4si-S0-6fG" firstAttribute="centerY" secondItem="tby-XM-32E" secondAttribute="centerY" id="cNI-Ch-IgG"/>
+                            <constraint firstItem="0Gc-Uh-b8B" firstAttribute="leading" secondItem="tby-XM-32E" secondAttribute="leading" constant="25" id="zUi-Ci-DZC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tby-XM-32E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Fim-U8-X1v"/>
+                    <constraint firstItem="tby-XM-32E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aCF-5z-Mt5"/>
+                    <constraint firstAttribute="bottom" secondItem="tby-XM-32E" secondAttribute="bottom" id="evJ-GF-ttc"/>
+                    <constraint firstAttribute="trailing" secondItem="tby-XM-32E" secondAttribute="trailing" id="udo-UZ-O6e"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLbl" destination="bvX-ZK-0gT" id="abK-W5-vCy"/>
+                <outlet property="dateLbl" destination="DaT-fT-ERy" id="l3y-yX-0fB"/>
+                <outlet property="nameLbl" destination="OfI-Cf-cOJ" id="iHQ-tU-5u7"/>
+                <outlet property="requestView" destination="tby-XM-32E" id="UCi-CP-kUh"/>
+                <outlet property="statusImg" destination="4si-S0-6fG" id="oDD-AV-xba"/>
+            </connections>
+            <point key="canvasLocation" x="-57.971014492753625" y="90.736607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="read" width="200" height="200"/>
+    </resources>
+</document>

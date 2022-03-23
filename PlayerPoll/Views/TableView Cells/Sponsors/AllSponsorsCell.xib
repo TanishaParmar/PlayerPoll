@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="AllSponsorsCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypA-3N-QYG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LsJ-Y8-wka">
+                                <rect key="frame" x="8" y="11" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LsJ-Y8-wka" secondAttribute="height" multiplier="1:1" id="qaB-gq-HKP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqi-Qr-6ee" customClass="PPSponsorsWhiteNameLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                <rect key="frame" x="74" y="27" width="231" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062602095309999994" green="0.143920511" blue="0.62980532649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LsJ-Y8-wka" firstAttribute="centerY" secondItem="ypA-3N-QYG" secondAttribute="centerY" id="E2a-h2-qgj"/>
+                            <constraint firstItem="eqi-Qr-6ee" firstAttribute="centerY" secondItem="LsJ-Y8-wka" secondAttribute="centerY" id="Eyi-UA-9XT"/>
+                            <constraint firstItem="LsJ-Y8-wka" firstAttribute="width" secondItem="ypA-3N-QYG" secondAttribute="width" multiplier="0.16" id="KtO-62-JfS"/>
+                            <constraint firstAttribute="trailing" secondItem="eqi-Qr-6ee" secondAttribute="trailing" constant="15" id="PxH-b4-bhk"/>
+                            <constraint firstItem="eqi-Qr-6ee" firstAttribute="leading" secondItem="LsJ-Y8-wka" secondAttribute="trailing" constant="15" id="QVf-rr-oGP"/>
+                            <constraint firstItem="LsJ-Y8-wka" firstAttribute="leading" secondItem="ypA-3N-QYG" secondAttribute="leading" constant="8" id="VPt-ch-z38"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ypA-3N-QYG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JyR-fa-mL6"/>
+                    <constraint firstItem="ypA-3N-QYG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SOD-4O-tBm"/>
+                    <constraint firstAttribute="trailing" secondItem="ypA-3N-QYG" secondAttribute="trailing" id="VJo-fy-Eg3"/>
+                    <constraint firstAttribute="bottom" secondItem="ypA-3N-QYG" secondAttribute="bottom" id="sbo-eu-crb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgSponsors" destination="LsJ-Y8-wka" id="Ogz-jH-Tmv"/>
+                <outlet property="nameLbl" destination="eqi-Qr-6ee" id="lzy-Pe-Cai"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="61.272321428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="1200" height="800"/>
+    </resources>
+</document>

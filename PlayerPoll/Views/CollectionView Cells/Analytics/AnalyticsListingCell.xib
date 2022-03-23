@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AnalyticsListingCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="177"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-2d-axd">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="177"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6bl-42-OW5">
+                                <rect key="frame" x="10" y="53" width="150" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-fa-vlT" customClass="PPAnalyticsListingWhiteNumberLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average responses per poll" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXi-8M-b12" customClass="PPAnalyticsYellowLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="30.5" width="150" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062602095309999994" green="0.143920511" blue="0.62980532649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6bl-42-OW5" firstAttribute="leading" secondItem="2Bl-2d-axd" secondAttribute="leading" constant="10" id="d3b-yw-Mo3"/>
+                            <constraint firstItem="6bl-42-OW5" firstAttribute="centerY" secondItem="2Bl-2d-axd" secondAttribute="centerY" id="hMu-Ao-Htf"/>
+                            <constraint firstItem="6bl-42-OW5" firstAttribute="centerX" secondItem="2Bl-2d-axd" secondAttribute="centerX" id="lvg-0F-s9a"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.030451681460000001" green="0.27548453210000001" blue="0.65129488710000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="2Bl-2d-axd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0qA-Ws-cEe"/>
+                <constraint firstItem="2Bl-2d-axd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7CK-Xf-adi"/>
+                <constraint firstAttribute="bottom" secondItem="2Bl-2d-axd" secondAttribute="bottom" id="Zgw-7k-Vhe"/>
+                <constraint firstAttribute="trailing" secondItem="2Bl-2d-axd" secondAttribute="trailing" id="jzc-47-uUS"/>
+            </constraints>
+            <size key="customSize" width="170" height="183"/>
+            <connections>
+                <outlet property="lblDetails" destination="KXi-8M-b12" id="NrX-19-gaE"/>
+                <outlet property="lblTitle" destination="cpw-fa-vlT" id="xAd-p1-ng7"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="103.89805097451276"/>
+        </collectionViewCell>
+    </objects>
+</document>

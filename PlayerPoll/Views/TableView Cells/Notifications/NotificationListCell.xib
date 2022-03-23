@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="NotificationListCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nR-Pa-WOH">
+                        <rect key="frame" x="0.0" y="0.0" width="431" height="2.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2.5" id="1R1-g0-26V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-1H-tzp">
+                        <rect key="frame" x="0.0" y="83.5" width="431" height="2.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2.5" id="lw4-6I-IXo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification" translatesAutoresizingMaskIntoConstraints="NO" id="V82-Vx-c4j">
+                        <rect key="frame" x="21.5" y="23" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="V82-Vx-c4j" secondAttribute="height" multiplier="1:1" id="4FF-d4-nBc"/>
+                            <constraint firstAttribute="width" constant="40" id="JMC-sE-FPi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvW-GO-DdK">
+                        <rect key="frame" x="21.5" y="0.0" width="388" height="1"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-LC-pAU">
+                        <rect key="frame" x="71.5" y="27.5" width="338" height="31"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have a new notification!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-ad-zW1" customClass="PPNotifTitleLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1 Oct 2021 18:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diX-p0-KDg" customClass="PPNotifDateLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28.5" width="338" height="2.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.2898610532" blue="0.68119913340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Xge-1H-tzp" secondAttribute="bottom" id="54z-en-zWK"/>
+                    <constraint firstItem="6nR-Pa-WOH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5kj-nW-QGD"/>
+                    <constraint firstItem="V82-Vx-c4j" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6nI-fQ-ZnF"/>
+                    <constraint firstItem="4Pc-LC-pAU" firstAttribute="leading" secondItem="V82-Vx-c4j" secondAttribute="trailing" constant="10" id="Ebt-Ee-JwI"/>
+                    <constraint firstItem="AvW-GO-DdK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Hgy-93-uIR"/>
+                    <constraint firstItem="6nR-Pa-WOH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HlR-pH-J2s"/>
+                    <constraint firstItem="AvW-GO-DdK" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.01" id="LM2-28-55Z"/>
+                    <constraint firstAttribute="trailing" secondItem="6nR-Pa-WOH" secondAttribute="trailing" id="LwQ-A4-aNx"/>
+                    <constraint firstItem="Xge-1H-tzp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QmF-4C-Px4"/>
+                    <constraint firstItem="V82-Vx-c4j" firstAttribute="leading" secondItem="AvW-GO-DdK" secondAttribute="leading" id="Zsk-mU-r3Y"/>
+                    <constraint firstItem="4Pc-LC-pAU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="efX-oC-Yew"/>
+                    <constraint firstItem="4Pc-LC-pAU" firstAttribute="top" secondItem="6nR-Pa-WOH" secondAttribute="bottom" constant="25" id="nYO-ef-t8b"/>
+                    <constraint firstItem="4Pc-LC-pAU" firstAttribute="trailing" secondItem="AvW-GO-DdK" secondAttribute="trailing" id="ogP-BM-JT3"/>
+                    <constraint firstItem="AvW-GO-DdK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="sHj-1y-W9u"/>
+                    <constraint firstItem="AvW-GO-DdK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sUM-2O-nBE"/>
+                    <constraint firstAttribute="trailing" secondItem="Xge-1H-tzp" secondAttribute="trailing" id="v5C-yD-TYe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="diX-p0-KDg" id="hDh-hg-ysj"/>
+                <outlet property="notifImageView" destination="V82-Vx-c4j" id="aZc-GO-DrU"/>
+                <outlet property="notifTitleLbl" destination="pCj-ad-zW1" id="lyo-Po-TuC"/>
+                <outlet property="topSeperatorLbl" destination="6nR-Pa-WOH" id="6Aw-re-uoZ"/>
+            </connections>
+            <point key="canvasLocation" x="109.42028985507247" y="105.80357142857143"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="notification" width="100" height="100"/>
+    </resources>
+</document>

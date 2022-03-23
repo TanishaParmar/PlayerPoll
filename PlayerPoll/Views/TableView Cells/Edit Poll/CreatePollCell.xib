@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="CreatePollCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0Y-x8-Pu5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Option 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-66-pFK" customClass="PPRegularTextField" customModule="PlayerPoll" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="16" width="320" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fYM-ge-Jis"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062602095309999994" green="0.143920511" blue="0.62980532649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p9b-66-pFK" secondAttribute="trailing" id="FYa-2w-jZ1"/>
+                            <constraint firstItem="p9b-66-pFK" firstAttribute="centerY" secondItem="f0Y-x8-Pu5" secondAttribute="centerY" id="HTt-bo-kUl"/>
+                            <constraint firstItem="p9b-66-pFK" firstAttribute="leading" secondItem="f0Y-x8-Pu5" secondAttribute="leading" id="Zqd-Fg-Nzv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="f0Y-x8-Pu5" secondAttribute="trailing" id="FHi-v0-otc"/>
+                    <constraint firstAttribute="bottom" secondItem="f0Y-x8-Pu5" secondAttribute="bottom" id="Fkb-y6-ClT"/>
+                    <constraint firstItem="f0Y-x8-Pu5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="THj-Dg-8ik"/>
+                    <constraint firstItem="f0Y-x8-Pu5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oPh-71-GL5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="txtOption" destination="p9b-66-pFK" id="REN-DA-fX7"/>
+            </connections>
+            <point key="canvasLocation" x="139.19999999999999" y="84.557721139430285"/>
+        </tableViewCell>
+    </objects>
+</document>

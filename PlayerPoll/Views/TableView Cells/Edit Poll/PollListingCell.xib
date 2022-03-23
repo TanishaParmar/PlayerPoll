@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="PollListingCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpA-Ch-BvF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-Aq-tqe">
+                                <rect key="frame" x="16" y="15" width="288" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvv-6Q-yfv" customClass="PPEditPollNameLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="14"/>
+                                        <string key="text">To run the test, you'll be connected to Measurement Lab (M-Lab) and your IP address will be shared with them and processed by them in accordance with their privacy policy. M-Lab conducts the test and publicly publishes all test results to promote Internet research.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CatId  - 1018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnf-wJ-XRa" customClass="PPEditPollCategoryLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24" width="288" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="oyW-gL-Lmf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17/Nov/2021 11:20 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2Z-TF-3Q9" customClass="PPEditPollTimeLabel" customModule="PlayerPoll" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="54" width="288" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="IJ6-3u-qNO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-wA-ZaF">
+                                <rect key="frame" x="0.0" y="101" width="320" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.80000000000000004" id="thm-ju-b6o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062728956340000003" green="0.1442552805" blue="0.62570387130000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nFP-Aq-tqe" firstAttribute="top" secondItem="QpA-Ch-BvF" secondAttribute="top" constant="15" id="5QA-vY-fbW"/>
+                            <constraint firstAttribute="bottom" secondItem="fdn-wA-ZaF" secondAttribute="bottom" id="7Ob-T5-vZm"/>
+                            <constraint firstItem="nFP-Aq-tqe" firstAttribute="centerX" secondItem="QpA-Ch-BvF" secondAttribute="centerX" id="9ow-gI-f27"/>
+                            <constraint firstItem="nFP-Aq-tqe" firstAttribute="width" secondItem="QpA-Ch-BvF" secondAttribute="width" multiplier="0.9" id="MGR-st-dQ1"/>
+                            <constraint firstItem="fdn-wA-ZaF" firstAttribute="centerX" secondItem="QpA-Ch-BvF" secondAttribute="centerX" id="N8H-IP-59n"/>
+                            <constraint firstAttribute="bottom" secondItem="nFP-Aq-tqe" secondAttribute="bottom" constant="15" id="Yhc-U2-yWF"/>
+                            <constraint firstItem="fdn-wA-ZaF" firstAttribute="width" secondItem="QpA-Ch-BvF" secondAttribute="width" id="qdG-1H-ifa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QpA-Ch-BvF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="71K-N5-MDS"/>
+                    <constraint firstItem="QpA-Ch-BvF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZT8-tt-NKt"/>
+                    <constraint firstAttribute="bottom" secondItem="QpA-Ch-BvF" secondAttribute="bottom" id="f8J-jP-Ld7"/>
+                    <constraint firstAttribute="trailing" secondItem="QpA-Ch-BvF" secondAttribute="trailing" id="pOV-2s-qIN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblCategoryId" destination="fnf-wJ-XRa" id="8jb-uY-7i9"/>
+                <outlet property="lblName" destination="Fvv-6Q-yfv" id="tUz-hj-bHo"/>
+                <outlet property="lblTime" destination="j2Z-TF-3Q9" id="k4j-Gi-XBt"/>
+            </connections>
+            <point key="canvasLocation" x="-46.376811594202906" y="70.982142857142847"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Code Pro Bold LC.otf">
+            <string>Code-Pro-Bold-LC</string>
+        </array>
+        <array key="Code Pro LC.otf">
+            <string>Code-Pro-LC</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AgeIdentifierCell" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="254" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="254" height="89"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wa-r9-FPG">
+                        <rect key="frame" x="5" y="5" width="244" height="79"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-Kf-6tF">
+                                <rect key="frame" x="15" y="19" width="214" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ttj-7y-Efi">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="15"/>
+                                        <fontDescription key="fontDescription" name="Code-Pro-LC" family="Code Pro LC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zaj-vz-bo4">
+                                        <rect key="frame" x="0.0" y="25" width="214" height="16"/>
+                                        <fontDescription key="fontDescription" name="Code-Pro-Bold-LC" family="Code Pro Bold LC" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CU5-Kf-6tF" firstAttribute="centerX" secondItem="8Wa-r9-FPG" secondAttribute="centerX" id="HIC-at-2pB"/>
+                            <constraint firstItem="CU5-Kf-6tF" firstAttribute="leading" secondItem="8Wa-r9-FPG" secondAttribute="leading" constant="15" id="L2m-rE-t6i"/>
+                            <constraint firstItem="CU5-Kf-6tF" firstAttribute="centerY" secondItem="8Wa-r9-FPG" secondAttribute="centerY" id="a9y-zg-9G6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="35"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="8Wa-r9-FPG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="FNq-qO-bSq"/>
+                <constraint firstItem="8Wa-r9-FPG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="LIj-yn-E5N"/>
+                <constraint firstItem="8Wa-r9-FPG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="QZe-W2-bUq"/>
+                <constraint firstItem="8Wa-r9-FPG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="a5H-vF-9gG"/>
+            </constraints>
+            <size key="customSize" width="254" height="89"/>
+            <connections>
+                <outlet property="ageLbl" destination="zaj-vz-bo4" id="Aer-ae-wjD"/>
+                <outlet property="bgView" destination="8Wa-r9-FPG" id="DPG-M3-Z21"/>
+                <outlet property="nameLbl" destination="ttj-7y-Efi" id="v3l-ai-tRt"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="104.79910714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

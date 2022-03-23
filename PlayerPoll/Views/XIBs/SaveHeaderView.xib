@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SaveHeaderView" customModule="PlayerPoll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="597" height="143"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDL-rj-4go">
+                    <rect key="frame" x="30" y="0.0" width="537" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0Tj-nC-rtu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Yzi-hW-QP8">
+                    <rect key="frame" x="30" y="93" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="EFb-0m-oOv"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqw-xb-6lZ">
+                    <rect key="frame" x="22.5" y="85.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Td6-g9-hkR"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="backBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="crc-ym-Esn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWy-cg-Y96" customClass="PPHeaderSaveButton" customModule="PlayerPoll" customModuleProvider="target">
+                    <rect key="frame" x="533" y="88" width="34" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="R35-CQ-agh"/>
+                    </constraints>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="saveBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7vx-sh-jdJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-9b-M9a" customClass="PPNavTitleLabel" customModule="PlayerPoll" customModuleProvider="target">
+                    <rect key="frame" x="82.5" y="95" width="432" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Yzi-hW-QP8" firstAttribute="leading" secondItem="jDL-rj-4go" secondAttribute="leading" id="0Y6-Oi-G8t"/>
+                <constraint firstItem="Yzi-hW-QP8" firstAttribute="width" secondItem="Yzi-hW-QP8" secondAttribute="height" multiplier="1:1" id="4Ws-sB-MtK"/>
+                <constraint firstItem="jDL-rj-4go" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7hg-Fl-xSz"/>
+                <constraint firstItem="Bqw-xb-6lZ" firstAttribute="width" secondItem="Bqw-xb-6lZ" secondAttribute="height" multiplier="1:1" id="EN1-4J-ciP"/>
+                <constraint firstItem="oWy-cg-Y96" firstAttribute="centerY" secondItem="Yzi-hW-QP8" secondAttribute="centerY" id="ICu-PI-VN9"/>
+                <constraint firstItem="jDL-rj-4go" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MPN-9G-MF4"/>
+                <constraint firstItem="Yzi-hW-QP8" firstAttribute="centerX" secondItem="Bqw-xb-6lZ" secondAttribute="centerX" id="MXp-73-IMt"/>
+                <constraint firstItem="jDL-rj-4go" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="TTx-44-new"/>
+                <constraint firstItem="Gpe-9b-M9a" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gVp-Sa-lLH"/>
+                <constraint firstAttribute="bottom" secondItem="Yzi-hW-QP8" secondAttribute="bottom" constant="25" id="hBq-BL-51O"/>
+                <constraint firstItem="Gpe-9b-M9a" firstAttribute="centerY" secondItem="Yzi-hW-QP8" secondAttribute="centerY" id="j1b-Ts-ynX"/>
+                <constraint firstItem="Yzi-hW-QP8" firstAttribute="centerY" secondItem="Bqw-xb-6lZ" secondAttribute="centerY" id="moV-MV-uAI"/>
+                <constraint firstItem="oWy-cg-Y96" firstAttribute="trailing" secondItem="jDL-rj-4go" secondAttribute="trailing" id="rMJ-h8-MQD"/>
+                <constraint firstItem="Gpe-9b-M9a" firstAttribute="leading" secondItem="Bqw-xb-6lZ" secondAttribute="trailing" constant="20" id="wNr-jA-shR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addBtn" destination="oWy-cg-Y96" id="Gqi-sq-Wog"/>
+                <outlet property="backBtn" destination="Bqw-xb-6lZ" id="DzB-qQ-leC"/>
+                <outlet property="backImageView" destination="Yzi-hW-QP8" id="rPh-mL-l6n"/>
+                <outlet property="titleLbl" destination="Gpe-9b-M9a" id="uHz-XJ-hfs"/>
+            </connections>
+            <point key="canvasLocation" x="167.39130434782609" y="-165.73660714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="100" height="100"/>
+    </resources>
+</document>
