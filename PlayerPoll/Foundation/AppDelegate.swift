@@ -37,7 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        SwiftGoogleTranslate.shared.start(with: "AIzaSyCeUzU8KpLArAbyHB2BqJUWJsVeOtOClIo")
+        SwiftGoogleTranslate.shared.start(with: "AIzaSyD1R5tH8nwkpkwmPT4ek2gMsYNx_5xlink")
+//        SwiftGoogleTranslate.shared.start(with: "AIzaSyCeUzU8KpLArAbyHB2BqJUWJsVeOtOClIo")
        /* GADMobileAds.sharedInstance().start(completionHandler: nil)
    //     GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ GADSimulatorID ]
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["285c265d9951789bcc244a1b5cc1b35e" ]*/
