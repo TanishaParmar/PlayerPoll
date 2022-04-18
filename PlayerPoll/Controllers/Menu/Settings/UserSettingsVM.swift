@@ -91,13 +91,17 @@ class UserSettingsVM {
         let params = ["authToken":Globals.authToken, "userName": userName, "notificationDisable": notificationState,"countryCode":countryCode] as [String:AnyObject]
         let url = getFinalUrl(with: .editProfile)
         var imagArray = [[String:Any]]()
-        if let img = profileImage{
+        if let img = profileImage {
             imagArray.append(["param":"profileImage","imageData":img])
         }
         self.delegate?.showHideHUD(showVal: true)
         DataManager.requestPOSTWithFormData(type: GetProfileResponseModel.self, strURL: url, params: params, headers: HTTPHeaders([]), imageData: imagArray) { response, statusCode in
             print("response is =>",response)
             self.delegate?.showHideHUD(showVal: false)
+            if statusCode == 200 {
+                DisplayAlertManager.shared.displayAlert(animated: true, message: response.message, okTitle: "OK", handlerOK: nil)
+
+            }
             if let userProfileData = response.data {
                 self.details.value = userProfileData
             }

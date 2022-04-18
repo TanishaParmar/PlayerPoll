@@ -80,7 +80,7 @@ class IdentifierViewModal {
         let params = ["bio":bio,"userIdentify":genderType,"userAgeGroup":ageType,"authToken":Globals.authToken] as [String:AnyObject]
         DataManager.requestPOSTWithFormData(type: IdentifiersResponseModel.self, strURL: url, params: params, headers: HTTPHeaders([]), imageData: [[String : Any]]()) { response, status in
             self.delegate?.showHideHUD(showVal: false)
-            if status == 401{
+            if status == 401 {
                 appDelegate().setLogoutScreen()
                 return
             }

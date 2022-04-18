@@ -28,6 +28,12 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
     var name = ""
     var fromSuperAdmin = false
     var fromAppDel = false
+    
+    
+    
+    var socketManager: SocketManger?
+    
+    
     override func configureMessageCollectionView() {
         super.configureMessageCollectionView()
         messagesCollectionView.messagesLayoutDelegate = self
@@ -40,6 +46,7 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        socketManager = SocketManger()
         lblName.text = name
         if fromSuperAdmin{
             imgProfile.image = UIImage(named: "support")
@@ -67,6 +74,8 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
     
     override func viewDidDisappear(_ animated: Bool) {
         dismissedChat?()
+        socketManager?.disconnect()
+        socketManager = nil
     }
     
     func configureMessageInputBar() {
@@ -87,7 +96,14 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
             self.navigationController?.popViewController(animated: true)
             return
         }
-        SocketManger.shared.connect()
+//        SocketManger.shared.checkConnectionStatus()
+//        SocketManger.shared.connect()
+        socketManager?.checkConnectionStatus()
+        socketManager?.connect()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//            SocketManger.shared.checkConnectionStatus()
+            self.socketManager?.checkConnectionStatus()
+        }
         generateRoomId { [weak self] roomId in
             self?.roomId = roomId
             self?.onConnectSocket(roomId: roomId)
@@ -97,14 +113,15 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
     }
     
     func onConnectSocket(roomId: String){
-        SocketManger.shared.onConnect {
-            SocketManger.shared.socket.emit("ConncetedChat", roomId)
+//        SocketManger.shared.onConnect {
+        socketManager?.onConnect {
+            self.socketManager?.socket.emit("ConncetedChat", roomId)
             self.newMessageSocketOn()
         }
     }
     
     func newMessageSocketOn() {
-        SocketManger.shared.handleNewMessage { (msgObj) in
+        socketManager?.handleNewMessage { (msgObj) in
             print(msgObj)
             let userId = msgObj["userID"] as? String ?? ""
             let userName = msgObj["userName"] as? String ?? ""
@@ -144,7 +161,7 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
                     let msg = MockMessage(text: message.message, user: .init(senderId: message.userID, displayName: message.userName), messageId: message.id, date: DateFormatterManager.shared.getDate(from: message.created), read: message.readStatus == "1")
                     self?.insertMessage(msg)
                     let chatObj = ["id":message.id,"userID":message.userID,"roomID":message.roomID,"message":message.message,"readStatus":message.readStatus,"created":message.created,"userName":message.userName,"profileImage":message.profileImage]
-                    SocketManger.shared.socket.emit("newMessage", rid, chatObj)
+                    self?.socketManager?.socket.emit("newMessage", rid, chatObj)
                 }
                 DispatchQueue.main.async { [weak self] in
                     inputBar.sendButton.stopAnimating()
@@ -169,7 +186,7 @@ class ChatDetailsVC: ChatViewController,InputBarAccessoryViewDelegate {
     //MARK:- IBAction Method(s)
     @IBAction func btnCancel(_ sender: Any) {
         if let roomId = self.roomId{
-            SocketManger.shared.socket.emit("leaveChat",roomId)
+            socketManager?.socket.emit("leaveChat",roomId)
         }
         if fromAppDel{
             appDelegate().setHomeScreen()
@@ -299,6 +316,7 @@ extension ChatDetailsVC{
     }
     
     func getChatMessages(fromFirst: Bool = false, roomId: String){
+        socketManager?.checkConnectionStatus()
         let url = getFinalUrl(with: .getChatMessages)
         let params = ["authToken":Globals.authToken,"perPage":30,"roomID":roomId,"pageNo":self.page] as [String:AnyObject]
         print(params)

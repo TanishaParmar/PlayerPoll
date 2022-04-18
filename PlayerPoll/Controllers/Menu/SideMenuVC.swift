@@ -127,6 +127,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
             cell.settingLbl.text = data.rawValue
             cell.menuIconView.image = data.image
             cell.badgeImageView.isHidden = (data != .messages) ? true : !(vm?.unReadNotifications.value ?? false)
+            cell.badgeImageView.isHidden = (data != .notifications) ? true : !(vm?.unReadNotifications.value ?? false)
         }
         return cell
     }

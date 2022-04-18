@@ -134,6 +134,10 @@ extension UserSettingsVC: ProgressHUDProtocol{
             HUD.hideHud()
         }
     }
+    
+    func showAlert(message: String) {
+        DisplayAlertManager.shared.displayAlert(animated: true, message: message, okTitle: "OK", handlerOK: nil)
+    }
 }
 
 //MARK:- Image Picker Delegate Method(s)

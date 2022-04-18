@@ -38,7 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         SwiftGoogleTranslate.shared.start(with: "AIzaSyD1R5tH8nwkpkwmPT4ek2gMsYNx_5xlink")
-//        SwiftGoogleTranslate.shared.start(with: "AIzaSyCeUzU8KpLArAbyHB2BqJUWJsVeOtOClIo")
+//        SwiftGoogleTranslate.shared.start(with: "AIzaSyCeUzU8KpLArAbyHB2BqJUWJsVeOtOClIo") // used musist key
+        
        /* GADMobileAds.sharedInstance().start(completionHandler: nil)
    //     GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ GADSimulatorID ]
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["285c265d9951789bcc244a1b5cc1b35e" ]*/
@@ -64,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
-    func setInitialLanding(){
+    func setInitialLanding() {
         let vc = SplashVC.instantiate(fromAppStoryboard: .Landing)
         let nav = UINavigationController(rootViewController: vc)
         nav.hero.isEnabled = true
@@ -72,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appDelegate().window?.rootViewController = nav
     }
     
-    func setHomeScreen(pollId: String = ""){
+    func setHomeScreen(pollId: String = "") {
         let homeVC = HomeVC.instantiate(fromAppStoryboard: .Home)
         homeVC.pollId = pollId
         let leftVC = SideMenuVC.instantiate(fromAppStoryboard: .Home)

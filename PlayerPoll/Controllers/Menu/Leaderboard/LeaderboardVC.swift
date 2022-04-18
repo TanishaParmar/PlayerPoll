@@ -54,15 +54,18 @@ class LeaderboardVC: UIViewController {
         vm?.getLeaderboard(with: "3")
         vm?.users.bind({ users in
             DispatchQueue.main.async { [weak self] in
-                self?.setPlayerData(users: users)
-                if users.isEmpty{
-                    self?.tableView.backgroundView = DesignHelper.createEmptyView(title: "No user has polled today!")
-                    self?.tableView.backgroundColor = #colorLiteral(red: 0.06274509804, green: 0.1450980392, blue: 0.631372549, alpha: 1)
-                }else{
-                    self?.tableView.backgroundColor = users.count <= 3 ? #colorLiteral(red: 0.06274509804, green: 0.1450980392, blue: 0.631372549, alpha: 1) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                    self?.tableView.backgroundView = nil
+                print("is visible \(HUD.isVisible())")
+                if HUD.isVisible() {
+                    self?.setPlayerData(users: users)
+                    if users.isEmpty {
+                        self?.tableView.backgroundView = DesignHelper.createEmptyView(title: "No user has polled today!")
+                        self?.tableView.backgroundColor = #colorLiteral(red: 0.06274509804, green: 0.1450980392, blue: 0.631372549, alpha: 1)
+                    } else {
+                        self?.tableView.backgroundColor = users.count <= 3 ? #colorLiteral(red: 0.06274509804, green: 0.1450980392, blue: 0.631372549, alpha: 1) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                        self?.tableView.backgroundView = nil
+                    }
+                    self?.tableView.reloadData()
                 }
-                self?.tableView.reloadData()
             }
         })
     }
@@ -118,14 +121,15 @@ class LeaderboardVC: UIViewController {
     }
 
     
-    @objc func changeSegment(sender: UISegmentedControl){
+    @objc func changeSegment(sender: UISegmentedControl) {
+        self.tableView.backgroundColor = .white
+        self.tableView.backgroundView = nil
         self.vm?.page = 1
         if sender.selectedSegmentIndex == 0 {
             self.vm?.getLeaderboard(with: "3")
         } else if sender.selectedSegmentIndex == 1 {
             self.vm?.getLeaderboard(with: "1")
-        }
-        else if sender.selectedSegmentIndex == 2 {
+        } else if sender.selectedSegmentIndex == 2 {
             self.vm?.getLeaderboard(with: "2")
        }
 //        self.vm?.getLeaderboard(with: sender.selectedSegmentIndex == 0 ? "3" : "2")

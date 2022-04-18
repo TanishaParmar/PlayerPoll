@@ -45,6 +45,10 @@ class HUD{
         }
     }
     
+    class func isVisible()-> Bool{
+        return SVProgressHUD.isVisible()
+    }
+    
     class func hideHud(){
         DispatchQueue.main.async {
             SVProgressHUD.dismiss();

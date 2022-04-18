@@ -9,7 +9,8 @@ import Foundation
 
 
 class Constant: NSObject {
-    static let appBaseUrl = "https://signidapp.com/playerPollStaging/Api/" // "https://www.dharmani.com/playerPoll/Api/"
+    static let appBaseUrl = "https://signidapp.com/playerPoll/Api/" // live
+//    static let appBaseUrl = "https://signidapp.com/playerPollStaging/Api/" //staging // "https://www.dharmani.com/playerPoll/Api/"
 }
 
 func getFinalUrl(with endPoint: NetworkConstants) -> String {
