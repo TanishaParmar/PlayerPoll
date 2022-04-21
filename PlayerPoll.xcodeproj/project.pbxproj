@@ -1820,7 +1820,7 @@
 				CODE_SIGN_ENTITLEMENTS = PlayerPoll/PlayerPoll.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = R5J2U4N8PJ;
 				INFOPLIST_FILE = "/Users/mymac/Downloads/PlayerPoll-main/PlayerPoll/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1845,7 +1845,7 @@
 				CODE_SIGN_ENTITLEMENTS = PlayerPoll/PlayerPoll.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 35;
+				CURRENT_PROJECT_VERSION = 36;
 				DEVELOPMENT_TEAM = R5J2U4N8PJ;
 				INFOPLIST_FILE = "/Users/mymac/Downloads/PlayerPoll-main/PlayerPoll/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

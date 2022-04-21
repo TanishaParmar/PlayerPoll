@@ -171,7 +171,7 @@ extension AddCategoryVC: ForgotViewModalProtocol {
     }
     
     func navigateForward() {
-        let message = self.vm?.cat != nil ? "Edited category successfully!" : "Added category successfully!"
+        let message = self.vm?.cat != nil ? "Category edited successfully!" : "Added category successfully!"
         DisplayAlertManager.shared.displayAlert(animated: true, message: message, okTitle: "OK") { [weak self] in
             self?.addedSuccessfully?()
             self?.navigationController?.popViewController(animated: true)

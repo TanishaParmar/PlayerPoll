@@ -83,7 +83,6 @@ class AddCategoryVM{
         
         let params = ["authToken":Globals.authToken,"title":catName,"catID":cat?.catID ?? "0","catColor":catColor,"audID1":self.selectedAudioObj.value?.data.audID ?? "", "audID2":self.selectedAudio2Obj.value?.data.audID ?? "", "audID3":self.selectedAudio3Obj.value?.data.audID ?? ""] as [String:AnyObject]
 
-
         DataManager.requestPOSTWithFormData(type: CreateEditPollResponse.self, strURL: url, params: params, headers: HTTPHeaders([]), imageData: [[String : Any]]()) { response, status in
             self.delegate?.showHideHUD(showVal: false)
             if response.status == 200 {
